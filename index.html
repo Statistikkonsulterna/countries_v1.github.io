@@ -64,7 +64,17 @@
     
   </div>
 
-  
+  <script>
+  // Force 'bubble_countries'
+  (function() {
+    const fixedHash = '#$chart-type=bubble_countries&url=v2';
+    if (window.location.hash !== fixedHash) {
+      window.location.hash = fixedHash;
+      window.location.reload(); // Reload to apply
+    }
+  })();
+</script>
+
   <script src="vendor.min.js"></script>
   <script src="tools.min.js"></script>
   <script src="config/properties.js"></script>
