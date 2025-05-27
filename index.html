@@ -24,6 +24,30 @@
   <link rel="stylesheet" href="assets/css/VizabiSharedComponents.css">
   <link rel="stylesheet" href="assets/css/bubblechart.css">
   <link rel="stylesheet" href="styles.css">
+
+    <style>
+      .buttonb {
+        border: none;
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s;
+      }
+      
+      .tab-bubble {background-color: #789e9e;}
+      .tab-bar {background-color: #60849a;}
+
+      h1 {
+        text-align: center;
+      }
+      </style>
+      
 </head>
 
 
@@ -33,12 +57,13 @@
 
     <div class="header">
 
+      <!--
       <div class="navigation">
         <div class="flow-container">
           <span class="app-chart-switcher"></span>
         </div>
       </div>
-      
+      -->
     
       <div class="language">
         <div class="flow-container">
@@ -64,17 +89,11 @@
     
   </div>
 
-  <script>
-  // Force 'bubble_countries'
-  (function() {
-    const fixedHash = '#$chart-type=bubble_countries&url=v2';
-    if (window.location.hash !== fixedHash) {
-      window.location.hash = fixedHash;
-      window.location.reload(); // Reload to apply
-    }
-  })();
-</script>
-
+  <div class="tabs">
+  <a href="https://statistikkonsulterna.github.io/countries_v1.github.io/#$chart-type=bubble_countries&url=v2"><button class= "buttonb tab-bubble" id="tab-bubble">Bubbeldiagram</button></a>
+<a href="https://statistikkonsulterna.github.io/rank_land.github.io/"><button class= "buttonb tab-bar" id="tab-bar">Rankat stapeldiagram</button></a>
+</div>
+  
   <script src="vendor.min.js"></script>
   <script src="tools.min.js"></script>
   <script src="config/properties.js"></script>
